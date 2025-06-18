@@ -2,7 +2,6 @@ package com.telco.incidents.controller;
 
 import com.telco.incidents.dto.IncidenciaRequestDTO;
 import com.telco.incidents.dto.IncidenciaResponseDTO;
-import com.telco.incidents.dto.IncidenciaResponseDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
