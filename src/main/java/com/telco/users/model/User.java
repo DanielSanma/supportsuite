@@ -46,7 +46,7 @@ public class User implements UserDetails {
     // Adaptación: Reemplazamos el enum por una relación Many-to-One
     @ManyToOne(fetch = FetchType.EAGER) // EAGER para que el rol se cargue siempre con el usuario
     @JoinColumn(name = "id_rol", nullable = false) // Mapea a la FK id_rol
-    private Rol rol;
+    private transient Rol rol;
 
     // --- Métodos de la interfaz UserDetails (¡IMPORTANTE ACTUALIZARLOS!) ---
 
