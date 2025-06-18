@@ -15,7 +15,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-public class AuthControllerImplTest {
+ class AuthControllerImplTest {
 
     private AuthenticationManager authenticationManager;
     private UserDetailsService userDetailsService;
@@ -48,7 +48,7 @@ public class AuthControllerImplTest {
 
         // Assert
         assertNotNull(response);
-        assertEquals(200, response.getStatusCodeValue());
+        assertEquals(200, response);
         assertNotNull(response.getBody());
         assertEquals(fakeToken, response.getBody().token());
 
