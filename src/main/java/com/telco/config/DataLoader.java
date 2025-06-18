@@ -40,7 +40,7 @@ public class DataLoader implements CommandLineRunner {
         log.info("Iniciando la carga de datos de prueba...");
 
         // --- 1. Crear Roles y Usuarios ---
-        Rol adminRol = createRolIfNotFound("admin");
+    
         Rol tecnicoRol = createRolIfNotFound("tecnico");
         Rol supervisorRol = createRolIfNotFound("supervisor"); // Nuevo rol
 
