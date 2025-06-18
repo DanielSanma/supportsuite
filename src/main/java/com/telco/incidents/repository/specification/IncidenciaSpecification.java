@@ -9,6 +9,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class IncidenciaSpecification {
 
+    private IncidenciaSpecification(){
+        
+    }
+
     /**
      * Devuelve una Specification que filtra por el ID de la incidencia.
      */
