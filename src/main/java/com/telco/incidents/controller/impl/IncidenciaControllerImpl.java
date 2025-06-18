@@ -25,6 +25,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
+
 @RestController
 @RequestMapping("/api/incidents")
 @RequiredArgsConstructor
@@ -77,7 +78,7 @@ public class IncidenciaControllerImpl implements IIncidenciaController {
     }
 
     @Override
-    @GetMapping("/{id}") // Mapea a peticiones GET a /api/incidents/{un_numero}
+    @GetMapping("/{id}") 
     @PreAuthorize("hasAnyRole('ADMIN', 'SUPERVISOR', 'TECHNICIAN')") // Permitimos que todos los usuarios logueados vean los detalles
     public ResponseEntity<IncidenciaResponseDTO> getIncidenciaById(@PathVariable Long id) {
 

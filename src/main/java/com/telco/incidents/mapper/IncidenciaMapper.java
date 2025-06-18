@@ -11,6 +11,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
 
+import java.util.Collections;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -40,7 +41,7 @@ public interface IncidenciaMapper {
     @Named("etiquetasToString")
     default Set<String> etiquetasToString(Set<Etiqueta> etiquetas) {
         if (etiquetas == null) {
-            return null;
+            return Collections.emptySet();
         }
         return etiquetas.stream()
                 .map(Etiqueta::getNombre)
