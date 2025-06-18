@@ -12,14 +12,14 @@ class TestControllerTest {
     @Test
     void helloPublic_returnsOkMessage() {
         ResponseEntity<String> response = controller.helloPublic();
-        assertEquals(200, response);
+        assertEquals(200, response.getStatusCodeValue());
         assertEquals("Hola! Este es un endpoint público.", response.getBody());
     }
 
     @Test
     void helloSupervisor_returnsOkMessage() {
         ResponseEntity<String> response = controller.helloSupervisor();
-        assertEquals(200, response);
+        assertEquals(200, response.getStatusCodeValue());
         assertEquals("Hola, Supervisor! Has accedido a un recurso protegido.", response.getBody());
     }
 }
