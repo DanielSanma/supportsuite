@@ -59,7 +59,7 @@ public class User implements UserDetails {
     @Override
     public String getUsername() {
         // Devolvemos el correo como nombre de usuario para Spring Security
-        return this.email;
+        return this.username;
     }
 
     // ... los otros métodos de UserDetails (isAccountNonExpired, etc.) se quedan igual ...
