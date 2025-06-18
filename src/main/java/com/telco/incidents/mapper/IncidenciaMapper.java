@@ -41,7 +41,7 @@ public interface IncidenciaMapper {
     @Named("etiquetasToString")
     default Set<String> etiquetasToString(Set<Etiqueta> etiquetas) {
         if (etiquetas == null) {
-            return Collections.emptySet();
+            return null;
         }
         return etiquetas.stream()
                 .map(Etiqueta::getNombre)
