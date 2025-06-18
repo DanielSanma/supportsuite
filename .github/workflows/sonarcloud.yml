@@ -41,10 +41,9 @@ jobs:
       - name: Analyze on SonarCloud
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn sonar:sonar \
-          -Dsonar.projectKey=supportsuite \
-          -Dsonar.organization=DanielSanma \
-          -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=${SONAR_TOKEN} \
-          -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
-
+        run: |
+          mvn sonar:sonar \
+            -Dsonar.projectKey=supportsuite \
+            -Dsonar.organization=DanielSanma \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.login=${SONAR_TOKEN}
