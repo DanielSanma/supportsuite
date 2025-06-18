@@ -44,7 +44,6 @@ public class DataLoader implements CommandLineRunner {
         Rol tecnicoRol = createRolIfNotFound("tecnico");
         Rol supervisorRol = createRolIfNotFound("supervisor"); // Nuevo rol
 
-        User userAdmin = createUserIfNotFound("admin@telconova.com", "Admin", "User", "admin123", adminRol);
         User userTecnico1 = createUserIfNotFound("tecnico1@telconova.com", "Ana", "Gomez", "tecnico123", tecnicoRol);
         User userSupervisor1 = createUserIfNotFound("supervisor1@telconova.com", "Carlos", "Perez", "supervisor123", supervisorRol);
 
